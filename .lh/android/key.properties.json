@@ -1,0 +1,22 @@
+{
+    "sourceFile": "android/key.properties",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1759144228644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1759144283613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+storePassword=vupop@123\r\n+keyPassword=vupop@123\r\n+keyAlias=vupopKey\r\n+storeFile=/Users/faysal/Projects/Zencloud Technologies/socials_app/vupop-App.jks\r\n"
+                }
+            ],
+            "date": 1759144228644,
+            "name": "Commit-0",
+            "content": "storePassword=vupop@123\r\nkeyPassword=vupop@123\r\nkeyAlias=vupopKey\r\nstoreFile=D:\\\\SadafProjectsData\\\\FlutterProjects\\\\WebRange\\\\SocialsApp\\\\apprelease\\\\vupop-App.jks\r\n"
+        }
+    ]
+}

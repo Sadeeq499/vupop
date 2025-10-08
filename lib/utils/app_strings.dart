@@ -1,0 +1,43 @@
+const String kAppName = "vupop App";
+
+const String kSplashRoute = "/splashScreen";
+const String kSignInRoute = "/signInScreen";
+const String kDiscoverRoute = '/discoverScreen';
+const String kFilterRoute = '/filterScreen';
+const String kDiscoverSearchRoute = '/searchScreen';
+const String kRecordingRoute = "/recordingScreen";
+const String kBottomNavBar = '/bottomNavbarScreen';
+const String kHomeScreenRoute = '/homeScreen';
+const String kChatScreenRoute = '/chatScreen';
+const String kProfileScreenRoute = '/profileScreen';
+const String kSingleChatScreenRoute = '/singleChatScreen';
+const String kProfileRoute = "/ProfileScreen";
+const String kBottomBarRoute = "/BottomBarWidget";
+const String kHelpAndSupportRoute = "/HelpandSupportScreen";
+const String kAccountDetailsRoute = "/AccountDetailsScreen";
+const String kSocialWalletRoute = "/SocialWalletScreen";
+const String kEditProfileRoute = "/EditProfileScreen";
+const String kRequestPaymentRoute = "/RequestPaymentScreen";
+const String kNotificationRoute = "/NotificationScreen";
+const String kMentionScreenRoute = "/MentionScreen";
+const String kHashTagScreenRoute = "/HashTagScreen";
+const String kexampleRoute = "/CameraPage";
+const String kDiscoverSwipeViewRoute = "/DiscoverSwipeViewRoute";
+const String kChatVideoViewPostsRoute = "/ChatVideoViewPostsRoute";
+const String kProfileSwipeViewPosts = "/ProfileSwipeViewPosts";
+const String kArchiveSwipeViewPosts = "/ArchiveSwipeViewPosts";
+const String kArchivePostsScreen = "/ArchiveScreen";
+const String kPostHighlightedView = "/PostDetailView";
+const String kGoCardlessAuthView = "/GoCardlessAuthView";
+const String kFollowersProfileScreen = "/FollowersProfileScreen";
+const String kFollowerSwipeViewPosts = "/FollowerSwipeViewPosts";
+const String kFollowerHighlightedPostView = "/FollowerHighlightedPostView";
+const String kCreateHighlightedPost = "/CreateHighlightedPost";
+const String kSetLocationScreen = "/SetLocationScreen";
+const String kSharePostScreen = "/SharePostScreen";
+const String kSingleCommunityChatScreen = "/SingleCommunityChatScreen";
+const String kRaiseAnIssueScreen = "/RaiseAnIssueScreen";
+
+/////........Map-Key......../////
+const String kGOOGLEMAPSAPIKEY = "AIzaSyAhWCo8KTDEHyPY5C93Fu7c5VdwDHDMr6o";
+const String kdarkMapStyle = 'assets/darkermapstyle.json';

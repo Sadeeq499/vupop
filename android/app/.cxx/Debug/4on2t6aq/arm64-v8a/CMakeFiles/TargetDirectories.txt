@@ -1,0 +1,2 @@
+D:/SadafProjectsData/FlutterProjects/WebRange/SocialsApp/socials_app/android/app/.cxx/Debug/4on2t6aq/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/SadafProjectsData/FlutterProjects/WebRange/SocialsApp/socials_app/android/app/.cxx/Debug/4on2t6aq/arm64-v8a/CMakeFiles/rebuild_cache.dir

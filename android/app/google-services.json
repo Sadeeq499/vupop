@@ -1,0 +1,246 @@
+{
+  "project_info": {
+    "project_number": "5391575861",
+    "project_id": "socials-ae8e9",
+    "storage_bucket": "socials-ae8e9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5391575861:android:600b7af2951dfbc3ebba7c",
+        "android_client_info": {
+          "package_name": "com.app.vupop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5391575861-2u3j6u1i9op3gnuncan6ttj809hfp3j3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.vupop",
+            "certificate_hash": "0d990030f5994d915da46bb16ec0b8ad812b62cc"
+          }
+        },
+        {
+          "client_id": "5391575861-6dmnmoe94odfm7qfvf3eap33krd5s2d0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.vupop",
+            "certificate_hash": "e64e9412994410806e980eac59c06741bd44845b"
+          }
+        },
+        {
+          "client_id": "5391575861-6n3f557o18bqhkh9pnqcurdfmkidd7au.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.vupop",
+            "certificate_hash": "ec47050d2d060415903cbccadc9ff855d3e2dd64"
+          }
+        },
+        {
+          "client_id": "5391575861-8st4u3v61a2k8cu6ht24juijuup3osvn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.vupop",
+            "certificate_hash": "c6bbe39e0ca2ac5979283e30979af63b7bc83fda"
+          }
+        },
+        {
+          "client_id": "5391575861-h0633f5s232g9lu2k6dlterr4eq54fba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.vupop",
+            "certificate_hash": "a735754e6e09a5dec8ed23dd87551bb8e2f262fb"
+          }
+        },
+        {
+          "client_id": "5391575861-ijegmh38im9lupq9mg77gatej2b1anha.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.vupop",
+            "certificate_hash": "3cc5bd692369d9bebc0be3d24074ff07d9680342"
+          }
+        },
+        {
+          "client_id": "5391575861-nkb23q8iv2st6ilp058nd15l5i89re4k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.vupop",
+            "certificate_hash": "2eb03c1c9a2ab8c64749e5b7acb1fe83f409c140"
+          }
+        },
+        {
+          "client_id": "5391575861-bfrt61u4uns1bmakgfb43q5bkk23sj15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8lbgff9h7A8XGdvFFwMp_9aOoohThGpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5391575861-bfrt61u4uns1bmakgfb43q5bkk23sj15.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "5391575861-cvj1loa6eitopofj5jmaha5grf1ajca9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.webrange.socials"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5391575861:android:012fefcb10a52661ebba7c",
+        "android_client_info": {
+          "package_name": "com.webrange.socials"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5391575861-77gs32o00cs3uas5jt73to35fcsgg0jf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials",
+            "certificate_hash": "a735754e6e09a5dec8ed23dd87551bb8e2f262fb"
+          }
+        },
+        {
+          "client_id": "5391575861-7erdq3krbjlcs603p8h43paufqgm9o4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials",
+            "certificate_hash": "e64e9412994410806e980eac59c06741bd44845b"
+          }
+        },
+        {
+          "client_id": "5391575861-8dnlsdjv0mc0u1mdqgd21qqkq0n26kp3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials",
+            "certificate_hash": "3cc5bd692369d9bebc0be3d24074ff07d9680342"
+          }
+        },
+        {
+          "client_id": "5391575861-b962qo2mcrlai9712v07qucmmbtkig8u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials",
+            "certificate_hash": "0d990030f5994d915da46bb16ec0b8ad812b62cc"
+          }
+        },
+        {
+          "client_id": "5391575861-f27kema35s45hkie7g5j3o6b7ji4alsj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials",
+            "certificate_hash": "ec47050d2d060415903cbccadc9ff855d3e2dd64"
+          }
+        },
+        {
+          "client_id": "5391575861-tekkk3097rqat2i0643mn358ov7cnktj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials",
+            "certificate_hash": "2eb03c1c9a2ab8c64749e5b7acb1fe83f409c140"
+          }
+        },
+        {
+          "client_id": "5391575861-tqjnj9212f7u5hptv5tqqud92ahmc45j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials",
+            "certificate_hash": "c6bbe39e0ca2ac5979283e30979af63b7bc83fda"
+          }
+        },
+        {
+          "client_id": "5391575861-bfrt61u4uns1bmakgfb43q5bkk23sj15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8lbgff9h7A8XGdvFFwMp_9aOoohThGpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5391575861-bfrt61u4uns1bmakgfb43q5bkk23sj15.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "5391575861-cvj1loa6eitopofj5jmaha5grf1ajca9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.webrange.socials"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5391575861:android:2b26d1aa262afe8eebba7c",
+        "android_client_info": {
+          "package_name": "com.webrange.socials_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5391575861-dpb8i7lm7ctrrm395u49olsmodd3rqqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials_app",
+            "certificate_hash": "2eb03c1c9a2ab8c64749e5b7acb1fe83f409c140"
+          }
+        },
+        {
+          "client_id": "5391575861-qfp6h3kfolhqs8sfa8hlrg9f2u6kkh2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.webrange.socials_app",
+            "certificate_hash": "0d990030f5994d915da46bb16ec0b8ad812b62cc"
+          }
+        },
+        {
+          "client_id": "5391575861-bfrt61u4uns1bmakgfb43q5bkk23sj15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8lbgff9h7A8XGdvFFwMp_9aOoohThGpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5391575861-bfrt61u4uns1bmakgfb43q5bkk23sj15.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "5391575861-cvj1loa6eitopofj5jmaha5grf1ajca9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.webrange.socials"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
