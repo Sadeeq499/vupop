@@ -287,8 +287,8 @@ class ProfileScreenController extends GetxController {
         // Add listener for prebuffering the next video
         if (i == startIndex) {
           controller.addListener(() {
-            final position = controller.value.position;
-            final duration = controller.value.duration;
+            final position = controller.controller.value.position;
+            final duration = controller.controller.value.duration;
 
             // If we're at least 80% through the video, prebuffer the next one
             if (position != null && duration != null && position.inMilliseconds > (duration.inMilliseconds * 0.8) && i < userPosts.length - 1) {

@@ -311,7 +311,7 @@ class RecordingScreen extends GetView<RecordingController> {
                 );
               } else {
                 double aspectRatio =
-                    controller.videoPlayerController.value!.value.aspectRatio;
+                    controller.videoPlayerController.value!.controller.value.aspectRatio;
                 return Center(
                   child: AspectRatio(
                     aspectRatio: aspectRatio,
@@ -432,7 +432,7 @@ class RecordingScreen extends GetView<RecordingController> {
                           );
                         } else {
                           double aspectRatio = controller
-                              .videoPlayerController.value!.value.aspectRatio;
+                              .videoPlayerController.value!.controller.value.aspectRatio;
                           return Center(
                             child: AspectRatio(
                               aspectRatio: aspectRatio,
