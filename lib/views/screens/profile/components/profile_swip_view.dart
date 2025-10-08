@@ -54,13 +54,13 @@ class ProfileSwipeViewPosts extends GetView<ProfileScreenController> {
                   /*onIndexChanged: (index) async {
                     controller.tappedPostIndex.value = index;
                     controller.isPlaying.value = true;
-                    await controller.videoControllers[index].play();
+                    await controller.videoControllers[index].controller.play();
                     if (index != 0) {
-                      await controller.videoControllers[index - 1].pause();
+                      await controller.videoControllers[index - 1].controller.pause();
                     }
                     if (index == controller.userPosts.length - 1) {
                       controller.isPlaying.value = true;
-                      await controller.videoControllers[index].play();
+                      await controller.videoControllers[index].controller.play();
                       CustomSnackbar.showSnackbar('No more posts to show');
                     } else {
                       controller.onIndexChanged(index);
@@ -76,20 +76,20 @@ class ProfileSwipeViewPosts extends GetView<ProfileScreenController> {
 
                     // Stop any currently playing videos
                     for (int i = 0; i < controller.videoControllers.length; i++) {
-                      if (i != index && controller.videoControllers[i].value.isPlaying) {
-                        await controller.videoControllers[i].pause();
+                      if (i != index && controller.videoControllers[i].controller.value.isPlaying) {
+                        await controller.videoControllers[i].controller.pause();
                       }
                     }
 
                     // Play the current video
-                    if (controller.videoControllers[index].value.isInitialized) {
-                      await controller.videoControllers[index].play();
+                    if (controller.videoControllers[index].controller.value.isInitialized) {
+                      await controller.videoControllers[index].controller.play();
                     } else {
                       // If not initialized yet, wait for it
                       controller.isVideoLoading.value = true;
                       await controller.videoControllers[index].initialize();
                       controller.isVideoLoading.value = false;
-                      await controller.videoControllers[index].play();
+                      await controller.videoControllers[index].controller.play();
                     }
 
                     // Prebuffer the next video
@@ -136,7 +136,7 @@ class ProfileSwipeViewPosts extends GetView<ProfileScreenController> {
                                         return snapshot.connectionState == ConnectionState.done
                                             ? GestureDetector(
                                                 onTap: () {
-                                                  controller.videoControllers[controller.tappedPostIndex.value].pause();
+                                                  controller.videoControllers[controller.tappedPostIndex.value].controller.pause();
                                                   Navigator.of(context).pop();
                                                   // Add your close functionality here
                                                   // For example: Get.back() or controller.closeVideo()
@@ -178,8 +178,8 @@ class ProfileSwipeViewPosts extends GetView<ProfileScreenController> {
                               uploadedUserPic: post.userId.image ?? '',
                               isBottomSheet: false,
                               videoController: controller.videoControllers[index],
-                              progress: controller.videoControllers[index].value.position.inMilliseconds /
-                                  controller.videoControllers[index].value.duration.inMilliseconds,
+                              progress: controller.videoControllers[index].controller.value.position.inMilliseconds /
+                                  controller.videoControllers[index].controller.value.duration.inMilliseconds,
                               // controller
                               //         .videoController!.value.position.inMilliseconds /
                               //     controller

@@ -392,7 +392,7 @@ class HomeScreenController extends GetxController {
   ///fn with pagination
   void onPageChange(int index) async {
     if (hasMorePosts.isFalse) {
-      await videoControllers[index - 1].value.pause();
+      await videoControllers[index - 1].value.controller.pause();
     }
 
     if (isIndexOutOfRange(index)) {
@@ -421,9 +421,9 @@ class HomeScreenController extends GetxController {
 
       // Video controller management
       if (videoControllers.isNotEmpty) {
-        videoControllers[index].value.setLooping(true);
-        videoControllers[index].value.setVolume(1.0);
-        videoControllers[index].value.play();
+        videoControllers[index].value.controller.setLooping(true);
+        videoControllers[index].value.controller.setVolume(1.0);
+        videoControllers[index].value.controller.play();
 
         // Update view count for the current post
         updateViewCount(

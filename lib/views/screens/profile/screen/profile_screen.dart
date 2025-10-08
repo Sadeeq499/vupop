@@ -973,7 +973,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                                                   controller
                                                       .initializeAllControllers(index, postLength > 3 ? 3 : postLength, isFromProfileScreen: true)
                                                       .then((val) {
-                                                    controller.videoControllers.first.play();
+                                                    controller.videoControllers.first.controller.play();
                                                   });*/
 
                                                   controller.tappedPostIndex
@@ -999,6 +999,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
                                                       controller
                                                           .videoControllers
                                                           .first
+                                                          .controller
                                                           .play();
                                                     });
                                                   } else {
@@ -1027,7 +1028,7 @@ class ProfileScreen extends GetView<ProfileScreenController> {
 
                                                   // Play the first video
                                                   if (controller.videoControllers.isNotEmpty) {
-                                                    controller.videoControllers.first.play();
+                                                    controller.videoControllers.first.controller.play();
                                                   } else {
                                                     // Initialize controllers
                                                     await controller.initializeAllControllers(index, videosToLoad);

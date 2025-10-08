@@ -58,7 +58,7 @@ class BottomNavigationScreen extends GetView<BottomBarController> {
               // homeScreenController.videoControllers[homeScreenController.previousValue.bitLength].value.pause();
               for (int i = 0; i < homeScreenController.videoControllers.length; i++) {
                 if (homeScreenController.videoControllers[i].value.value.isPlaying) {
-                  homeScreenController.videoControllers[i].value.pause();
+                  homeScreenController.videoControllers[i].value.controller.pause();
                   homeScreenController.isPlaying.value = false;
                 }
                 homeScreenController.videoControllers[i].refresh();

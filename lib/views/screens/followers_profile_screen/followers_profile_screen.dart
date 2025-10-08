@@ -329,11 +329,11 @@ class FollowersProfileScreen extends GetView<FollowersProfileController> {
                                               controller.disposeVideoPlayer();
                                               if (controller.followerPosts.length < 3) {
                                                 controller.initializeAllControllers(index, controller.followerPosts.length).then((a) {
-                                                  controller.videoControllers.first.play();
+                                                  controller.videoControllers.first.controller.play();
                                                 });
                                               } else {
                                                 controller.initializeAllControllers(index, 3).then((val) {
-                                                  controller.videoControllers.first.play();
+                                                  controller.videoControllers.first.controller.play();
                                                 });
                                               }
                                               Get.toNamed(kFollowerSwipeViewPosts);

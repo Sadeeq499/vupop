@@ -336,7 +336,7 @@ class ArchiveController extends GetxController {
 
   void onIndexChanged(int index) async {
     if (index - 1 != -1) {
-      await videoControllers[index - 1].pause();
+      await videoControllers[index - 1].controller.pause();
     }
     if (isIndexOutOfRange(index)) {
       CustomSnackbar.showSnackbar("Error: Post not found");
@@ -351,7 +351,7 @@ class ArchiveController extends GetxController {
       if (videoControllers.isNotEmpty) {
         videoControllers[index].setLooping(true);
         videoControllers[index].setVolume(1.0);
-        videoControllers[index].play();
+        videoControllers[index].controller.play();
       }
     }
   }
