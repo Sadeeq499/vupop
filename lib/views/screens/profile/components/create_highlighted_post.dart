@@ -220,18 +220,18 @@ class CreateHighlightedPost extends GetView<CreateHighlightedPostController> {
                               child: Obx(
                                 () => GestureDetector(
                                   onTap: () {
-                                    if (controller.highLightVideoController.value!.value.isPlaying) {
-                                      controller.highLightVideoController.value?.pause();
+                                    if (controller.highLightVideoController.value!.controller.value.isPlaying) {
+                                      controller.highLightVideoController.value?.controller.pause();
                                     } else {
-                                      controller.highLightVideoController.value?.play();
+                                      controller.highLightVideoController.value?.controller.play();
                                     }
                                   },
                                   child: SizedBox(
-                                    width: controller.highLightVideoController.value!.value.size.width,
-                                    height: controller.highLightVideoController.value!.value.size.height,
+                                    width: controller.highLightVideoController.value!.controller.value.size.width,
+                                    height: controller.highLightVideoController.value!.controller.value.size.height,
                                     child: AspectRatio(
-                                      aspectRatio: controller.highLightVideoController.value!.value.aspectRatio,
-                                      child: CachedVideoPlayerPlus(controller.highLightVideoController.value!),
+                                      aspectRatio: controller.highLightVideoController.value!.controller.value.aspectRatio,
+                                      child: VideoPlayer(controller.highLightVideoController.value!.controller),
                                     ),
                                   ),
                                 ),

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:cached_video_player_plus/cached_video_player_plus.dart';
+import 'package:video_player/video_player.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -257,9 +258,9 @@ class RecordingScreen extends GetView<RecordingController> {
                     child: Obx(
                       () => AspectRatio(
                         aspectRatio: controller
-                            .videoPlayerController.value!.value.aspectRatio,
-                        child: CachedVideoPlayerPlus(
-                            controller.videoPlayerController.value!),
+                            .videoPlayerController.value!.controller.value.aspectRatio,
+                        child: VideoPlayer(
+                            controller.videoPlayerController.value!.controller),
                       ),
                     ),
                   ),
@@ -284,7 +285,7 @@ class RecordingScreen extends GetView<RecordingController> {
                   !controller.isFileSelected.value &&
                   controller.rotateValue.value == 0 &&
                   controller.isLandScape.isFalse) {
-                Widget videoWidget = CachedVideoPlayerPlus(videoController);
+                Widget videoWidget = VideoPlayer(videoController.controller);
                 videoWidget = RotatedBox(quarterTurns: 0, child: videoWidget);
 
                 return Container(
@@ -316,7 +317,7 @@ class RecordingScreen extends GetView<RecordingController> {
                     aspectRatio: aspectRatio,
                     child: Container(
                       color: Colors.black,
-                      child: CachedVideoPlayerPlus(videoController),
+                      child: VideoPlayer(videoController.controller),
                     ),
                   ),
                 );
@@ -375,9 +376,9 @@ class RecordingScreen extends GetView<RecordingController> {
                               child: Obx(
                                 () => AspectRatio(
                                   aspectRatio: controller.videoPlayerController
-                                      .value!.value.aspectRatio,
-                                  child: CachedVideoPlayerPlus(
-                                      controller.videoPlayerController.value!),
+                                      .value!.controller.value.aspectRatio,
+                                  child: VideoPlayer(
+                                      controller.videoPlayerController.value!.controller),
                                 ),
                               ),
                             ),
@@ -404,7 +405,7 @@ class RecordingScreen extends GetView<RecordingController> {
                             controller.rotateValue.value == 0 &&
                             controller.isLandScape.isFalse) {
                           Widget videoWidget =
-                              CachedVideoPlayerPlus(videoController);
+                              VideoPlayer(videoController.controller);
                           videoWidget =
                               RotatedBox(quarterTurns: 0, child: videoWidget);
 
@@ -437,7 +438,7 @@ class RecordingScreen extends GetView<RecordingController> {
                               aspectRatio: aspectRatio,
                               child: Container(
                                 color: Colors.black,
-                                child: CachedVideoPlayerPlus(videoController),
+                                child: VideoPlayer(videoController.controller),
                               ),
                             ),
                           );

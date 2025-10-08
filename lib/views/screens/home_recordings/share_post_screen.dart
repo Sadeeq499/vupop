@@ -1,4 +1,5 @@
 import 'package:cached_video_player_plus/cached_video_player_plus.dart';
+import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -59,8 +60,8 @@ class SharePostScreen extends GetView<RecordingController> {
                                   () => AspectRatio(
                                     aspectRatio: controller.isFileSelected.isTrue
                                         ? controller.trimmer.value.videoPlayerController!.value.aspectRatio
-                                        : controller.videoPlayerController.value!.value.aspectRatio,
-                                    child: CachedVideoPlayerPlus(controller.videoPlayerController.value!),
+                                        : controller.videoPlayerController.value!.controller.value.aspectRatio,
+                                    child: VideoPlayer(controller.videoPlayerController.value!.controller),
                                   ),
                                 ),
                               ),
