@@ -1,4 +1,5 @@
 import 'package:cached_video_player_plus/cached_video_player_plus.dart';
+import 'package:video_player/video_player.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 

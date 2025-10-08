@@ -1,5 +1,4 @@
 import 'package:cached_video_player_plus/cached_video_player_plus.dart';
-import 'package:video_player/video_player.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';

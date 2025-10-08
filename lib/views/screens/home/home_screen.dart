@@ -48,10 +48,10 @@ class HomeScreen extends GetView<HomeScreenController> {
         GestureDetector(
           onTap: () {
             controller.isVideoChanged.value = false;
-            Get.find<VideoPlayerControllerX>().videoPlayer?.dispose();
-            Get.find<VideoPlayerControllerX>().videoPlayer = null;
+            Get.find<VideoPlayerControllerX>().videoPlayerController?.dispose();
+            Get.find<VideoPlayerControllerX>().videoPlayerController = null;
 
-            controller.videoControllers[controller.previousValue.bitLength].value.controller.pause();
+            controller.videoControllers[controller.previousValue.bitLength].value.pause();
             // Get.toNamed(kChatScreenRoute);
             Get.toNamed(kNotificationRoute);
           },

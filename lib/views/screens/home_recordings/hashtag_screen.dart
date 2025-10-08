@@ -1,5 +1,4 @@
 import 'package:cached_video_player_plus/cached_video_player_plus.dart';
-import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -61,8 +60,8 @@ class HashTagScreen extends GetView<RecordingController> {
                             : Center(
                                 child: Obx(
                                   () => AspectRatio(
-                                    aspectRatio: controller.videoPlayerController.value!.controller.value.aspectRatio,
-                                    child: VideoPlayer(controller.videoPlayerController.value!.controller),
+                                    aspectRatio: controller.videoPlayerController.value!.value.aspectRatio,
+                                    child: CachedVideoPlayerPlus(controller.videoPlayerController.value!),
                                   ),
                                 ),
                               ),

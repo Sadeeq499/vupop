@@ -291,7 +291,7 @@ class HomeScreenController extends GetxController {
 
   RxInt videoPreLoadLimit = 3.obs;
   RxInt currentIndex = 0.obs, previousValue = 0.obs;
-  RxList<Rx<CachedVideoPlayerPlusController>> videoControllers = <Rx<CachedVideoPlayerPlusController>>[].obs;
+  RxList<Rx<CachedVideoPlayerPlus>> videoControllers = <Rx<CachedVideoPlayerPlus>>[].obs;
   RxList<bool> isPreloaded = <bool>[].obs;
   RxBool isMoreLoading = false.obs;
   RxBool isPlaying = false.obs;
@@ -359,18 +359,17 @@ class HomeScreenController extends GetxController {
 
   Future<void> initializeVideoPlayer(String videoUrl) async {
     videoControllers
-        .add(Rx(CachedVideoPlayerPlusController.networkUrl(Uri.parse(videoUrl), invalidateCacheIfOlderThan: const Duration(minutes: 30))));
+        .add(Rx(CachedVideoPlayerPlus.networkUrl(Uri.parse(videoUrl), invalidateCacheIfOlderThan: const Duration(minutes: 30))));
     await videoControllers.last.value.initialize().then((_) {
-      videoControllers.last.value.setLooping(true);
-      videoControllers.last.value.setVolume(1.0);
-      videoControllers.last.value.pause();
+      videoControllers.last.value.controller.setLooping(true);
+      videoControllers.last.value.controller.setVolume(1.0);
+      videoControllers.last.value.controller.pause();
     });
   }
 
   Future<void> initializeFutureController(int index) async {
-    videoControllers.add(Rx<CachedVideoPlayerPlusController>(
-      CachedVideoPlayerPlusController.networkUrl(Uri.parse(posts[index].video),
-          videoPlayerOptions: VideoPlayerOptions(mixWithOthers: false), invalidateCacheIfOlderThan: const Duration(minutes: 1)),
+    videoControllers.add(Rx<CachedVideoPlayerPlus>(
+      CachedVideoPlayerPlus.networkUrl(Uri.parse(posts[index].video), invalidateCacheIfOlderThan: const Duration(minutes: 1)),
     ));
     await videoControllers[index].value.initialize().then((_) async {
       isPreloaded[index] = true;
@@ -393,7 +392,7 @@ class HomeScreenController extends GetxController {
   ///fn with pagination
   void onPageChange(int index) async {
     if (hasMorePosts.isFalse) {
-      await videoControllers[index - 1].value.controller.pause();
+      await videoControllers[index - 1].value.pause();
     }
 
     if (isIndexOutOfRange(index)) {
@@ -422,9 +421,9 @@ class HomeScreenController extends GetxController {
 
       // Video controller management
       if (videoControllers.isNotEmpty) {
-        videoControllers[index].value.controller.setLooping(true);
-        videoControllers[index].value.controller.setVolume(1.0);
-        videoControllers[index].value.controller.play();
+        videoControllers[index].value.setLooping(true);
+        videoControllers[index].value.setVolume(1.0);
+        videoControllers[index].value.play();
 
         // Update view count for the current post
         updateViewCount(
@@ -525,18 +524,18 @@ class HomeScreenController extends GetxController {
       if (await isHighResolutionVideo(videoUrl)) {
         String transcodedUrl = await VideoServices().transcodeVideo(videoUrl);
         videoControllers.add(Rx(transcodedUrl.startsWith("https")
-            ? CachedVideoPlayerPlusController.networkUrl(Uri.parse(transcodedUrl), invalidateCacheIfOlderThan: const Duration(minutes: 30))
-            : CachedVideoPlayerPlusController.file(File(transcodedUrl))));
+            ? CachedVideoPlayerPlus.networkUrl(Uri.parse(transcodedUrl), invalidateCacheIfOlderThan: const Duration(minutes: 30))
+            : CachedVideoPlayerPlus.file(File(transcodedUrl))));
       } else {
         // Use original for compatible videos
         videoControllers
-            .add(Rx(CachedVideoPlayerPlusController.networkUrl(Uri.parse(videoUrl), invalidateCacheIfOlderThan: const Duration(minutes: 30))));
+            .add(Rx(CachedVideoPlayerPlus.networkUrl(Uri.parse(videoUrl), invalidateCacheIfOlderThan: const Duration(minutes: 30))));
       }
 
       await videoControllers.last.value.initialize().then((_) {
-        videoControllers.last.value.setLooping(true);
-        videoControllers.last.value.setVolume(1.0);
-        videoControllers.last.value.pause();
+        videoControllers.last.value.controller.setLooping(true);
+        videoControllers.last.value.controller.setVolume(1.0);
+        videoControllers.last.value.controller.pause();
       });
     } catch (e) {
       printLogs("Video initialization error: $e");

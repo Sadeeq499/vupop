@@ -745,7 +745,7 @@ class RecordingController extends GetxController {
         videoPlayerController.value?.setVolume(0);
         videoPlayerController.value?.pause();
         // Only dispose if initialized to avoid the error
-        if (videoPlayerController.value!.controller.value.isInitialized) {
+        if (videoPlayerController.value!.value.isInitialized) {
           videoPlayerController.value?.dispose();
         }
       } catch (e) {
@@ -810,7 +810,7 @@ class RecordingController extends GetxController {
     if (videoPlayerController.value != null) {
       try {
         // Check if the video player is initialized
-        if (!videoPlayerController.value!.controller.value.isInitialized) {
+        if (!videoPlayerController.value!.value.isInitialized) {
           printLogs("=========Video player not initialized, waiting for initialization");
           await videoPlayerController.value!.initialize();
         }
@@ -2116,7 +2116,7 @@ class RecordingController extends GetxController {
           if (videoPlayerController.value != null) {
             try {
               // Check if controller is initialized before disposing
-              if (videoPlayerController.value!.controller.value.isInitialized) {
+              if (videoPlayerController.value!.value.isInitialized) {
                 await videoPlayerController.value!.dispose();
               }
             } catch (e) {
@@ -2129,7 +2129,7 @@ class RecordingController extends GetxController {
           if (videoPlayerController.value != null) {
             try {
               // Only initialize if not already initialized
-              if (!videoPlayerController.value!.controller.value.isInitialized) {
+              if (!videoPlayerController.value!.value.isInitialized) {
                 await videoPlayerController.value!.initialize();
               }
               await videoPlayerController.value!.controller.setVolume(isSound.value ? 1.0 : 0.0);
@@ -2188,7 +2188,7 @@ class RecordingController extends GetxController {
           if (videoPlayerController.value != null) {
             try {
               // Check if controller is initialized before disposing
-              if (videoPlayerController.value!.controller.value.isInitialized) {
+              if (videoPlayerController.value!.value.isInitialized) {
                 await videoPlayerController.value!.dispose();
               }
             } catch (e) {
@@ -2231,7 +2231,7 @@ class RecordingController extends GetxController {
   Future<double> _getVideoDuration(String videoPath) async {
     final controller = CachedVideoPlayerPlus.file(File(videoPath));
     await controller.initialize();
-    final duration = controller.controller.value.duration.inMilliseconds / 1000.0;
+    final duration = controller.value.duration.inMilliseconds / 1000.0;
     await controller.dispose();
     return duration;
   }

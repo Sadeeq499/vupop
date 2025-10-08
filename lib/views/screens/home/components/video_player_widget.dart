@@ -79,16 +79,16 @@ class VideoPlayerWidget extends StatelessWidget {
                 enableInfiniteScroll: false,
                 onPageChanged: (index, reason) async {
                   controller.updateViewCount(postId: controller.posts[index].id, index: index);
-                  await controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                  await controller.videoControllers[controller.previousValue.value].value.pause();
                   controller.isPlaying.value = false;
                   controller.isRatingTapped.value = false;
                   if (controller.isMoreLoading.value) {
-                    await controller.videoControllers[index].value.controller.pause();
+                    await controller.videoControllers[index].value.pause();
                     CustomSnackbar.showSnackbar('Loading in progress, please wait');
                   } else {
-                    await controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                    await controller.videoControllers[controller.previousValue.value].value.pause();
                     controller.previousValue.value = index;
-                    await controller.videoControllers[index].value.controller.play();
+                    await controller.videoControllers[index].value.play();
                     controller.isPlaying.value = true;
                     // if (index != 0) {
                     //   controller.videoControllers[index - 1].value.setVolume(0.0);
@@ -96,12 +96,12 @@ class VideoPlayerWidget extends StatelessWidget {
                     // }
                     if (index == controller.posts.length - 1) {
                       CustomSnackbar.showSnackbar('No more videos available');
-                      controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                      controller.videoControllers[controller.previousValue.value].value.pause();
                       controller.previousValue.value = index;
-                      await controller.videoControllers[index].value.controller.play();
+                      await controller.videoControllers[index].value.play();
                       controller.isPlaying.value = true;
                     } else if (controller.videoControllers.length - index <= 2) {
-                      controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                      controller.videoControllers[controller.previousValue.value].value.pause();
                       controller.previousValue.value = index;
                       controller.isVideoChanged.value = true;
                       controller.onPageChange(index);
@@ -194,7 +194,7 @@ class VideoPlayerWidget extends StatelessWidget {
                 onPageChanged: (index, reason) async {
                   if ((index) == (controller.posts.length >= 3 ? controller.posts.length - 3 : controller.posts.length) &&
                       controller.hasMorePosts.isTrue) {
-                    controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                    controller.videoControllers[controller.previousValue.value].value.pause();
                     controller.previousValue.value = index;
                     controller.isVideoChanged.value = true;
                     // controller.onPageChange(index);
@@ -208,7 +208,7 @@ class VideoPlayerWidget extends StatelessWidget {
 
                     printLogs('===============videoPlayerWidget controller.videoControllers ${controller.videoControllers.length}');
                     printLogs('===============videoPlayerWidget controller.previousValue.value ${controller.previousValue.value}');
-                    await controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                    await controller.videoControllers[controller.previousValue.value].value.pause();
                     printLogs('============all done');
                     controller.isPlaying.value = false;
                     controller.isRatingTapped.value = false;
@@ -216,29 +216,29 @@ class VideoPlayerWidget extends StatelessWidget {
                     if (controller.isMoreLoading.value) {
                       // Safety check before pausing current video
                       if (index < controller.videoControllers.length) {
-                        await controller.videoControllers[index].value.controller.pause();
+                        await controller.videoControllers[index].value.pause();
                       }
                       CustomSnackbar.showSnackbar('Loading in progress, please wait');
                       controller.carouselController.animateToPage(controller.previousValue.value);
                       return; // Exit early to prevent further processing
                     } else {
-                      await controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                      await controller.videoControllers[controller.previousValue.value].value.pause();
                       if (index < controller.videoControllers.length) {
                         controller.previousValue.value = index;
-                        await controller.videoControllers[index].value.controller.play();
+                        await controller.videoControllers[index].value.play();
                       }
                       controller.isPlaying.value = true;
 
                       if (index == controller.posts.length - 1 && controller.hasMorePosts.isFalse) {
                         CustomSnackbar.showSnackbar('No more videos available');
-                        controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                        controller.videoControllers[controller.previousValue.value].value.pause();
                         controller.previousValue.value = index;
-                        await controller.videoControllers[index].value.controller.play();
+                        await controller.videoControllers[index].value.play();
                         controller.isPlaying.value = true;
                         controller.carouselController.animateToPage(controller.previousValue.value);
                         return; // Exit early to prevent further processing
                       } else if (controller.videoControllers.length - index <= 2) {
-                        controller.videoControllers[controller.previousValue.value].value.controller.pause();
+                        controller.videoControllers[controller.previousValue.value].value.pause();
                         controller.previousValue.value = index;
                         controller.isVideoChanged.value = true;
                         controller.onPageChange(index);

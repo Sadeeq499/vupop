@@ -80,9 +80,9 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
     printLogs('=============index in post  contorller length ${widget.homeController.posts.length}');
     printLogs('=============index in VideoPlayer listener contorller length ${widget.homeController.videoControllers.length}');
     printLogs(
-        "=======VideoPlayer listener widget.homeController.videoControllers[widget.index].value.controller.value.size.width ${widget.homeController.videoControllers[widget.index].value.controller.value.size.width}");
+        "=======VideoPlayer listener widget.homeController.videoControllers[widget.index].value.value.size.width ${widget.homeController.videoControllers[widget.index].value.value.size.width}");
     printLogs(
-        "=======VideoPlayer listener widget.homeController.videoControllers[widget.index].value.controller.value.size.height ${widget.homeController.videoControllers[widget.index].value.controller.value.size.height}");
+        "=======VideoPlayer listener widget.homeController.videoControllers[widget.index].value.value.size.height ${widget.homeController.videoControllers[widget.index].value.value.size.height}");
     // if (widget.index >= widget.homeController.videoControllers.length) {
     //   printLogs('Invalid index or controllers not initialized');
     //   return;

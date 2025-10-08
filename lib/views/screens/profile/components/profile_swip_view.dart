@@ -76,13 +76,13 @@ class ProfileSwipeViewPosts extends GetView<ProfileScreenController> {
 
                     // Stop any currently playing videos
                     for (int i = 0; i < controller.videoControllers.length; i++) {
-                      if (i != index && controller.videoControllers[i].value.controller.value.isPlaying) {
+                      if (i != index && controller.videoControllers[i].value.isPlaying) {
                         await controller.videoControllers[i].pause();
                       }
                     }
 
                     // Play the current video
-                    if (controller.videoControllers[index].value.controller.value.isInitialized) {
+                    if (controller.videoControllers[index].value.isInitialized) {
                       await controller.videoControllers[index].play();
                     } else {
                       // If not initialized yet, wait for it
@@ -178,8 +178,8 @@ class ProfileSwipeViewPosts extends GetView<ProfileScreenController> {
                               uploadedUserPic: post.userId.image ?? '',
                               isBottomSheet: false,
                               videoController: controller.videoControllers[index],
-                              progress: controller.videoControllers[index].value.controller.value.position.inMilliseconds /
-                                  controller.videoControllers[index].value.controller.value.duration.inMilliseconds,
+                              progress: controller.videoControllers[index].value.position.inMilliseconds /
+                                  controller.videoControllers[index].value.duration.inMilliseconds,
                               // controller
                               //         .videoController!.value.position.inMilliseconds /
                               //     controller

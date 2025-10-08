@@ -65,13 +65,13 @@ class BottomNavigationScreen extends GetView<BottomBarController> {
               HomeScreenController homeScreenController =
                   Get.isRegistered<HomeScreenController>() ? Get.find<HomeScreenController>() : Get.put(HomeScreenController());
               Get.find<HomeScreenController>().isVideoChanged.value = false;
-              Get.find<VideoPlayerControllerX>().videoPlayer?.controller.pause();
-              Get.find<VideoPlayerControllerX>().videoPlayer?.dispose();
-              Get.find<VideoPlayerControllerX>().videoPlayer = null;
+              Get.find<VideoPlayerControllerX>().videoPlayerController?.pause();
+              Get.find<VideoPlayerControllerX>().videoPlayerController?.dispose();
+              Get.find<VideoPlayerControllerX>().videoPlayerController = null;
               // homeScreenController.videoControllers[homeScreenController.previousValue.bitLength].value.pause();
               for (int i = 0; i < homeScreenController.videoControllers.length; i++) {
-                if (homeScreenController.videoControllers[i].value.controller.value.isPlaying) {
-                  homeScreenController.videoControllers[i].value.controller.pause();
+                if (homeScreenController.videoControllers[i].value.value.isPlaying) {
+                  homeScreenController.videoControllers[i].value.pause();
                   homeScreenController.isPlaying.value = false;
                 }
                 homeScreenController.videoControllers[i].refresh();

@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:cached_video_player_plus/cached_video_player_plus.dart';
-import 'package:video_player/video_player.dart';
 import 'package:camera/camera.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
@@ -220,18 +219,18 @@ class CreateHighlightedPost extends GetView<CreateHighlightedPostController> {
                               child: Obx(
                                 () => GestureDetector(
                                   onTap: () {
-                                    if (controller.highLightVideoController.value!.controller.value.isPlaying) {
-                                      controller.highLightVideoController.value?.controller.pause();
+                                    if (controller.highLightVideoController.value!.value.isPlaying) {
+                                      controller.highLightVideoController.value?.pause();
                                     } else {
-                                      controller.highLightVideoController.value?.controller.play();
+                                      controller.highLightVideoController.value?.play();
                                     }
                                   },
                                   child: SizedBox(
-                                    width: controller.highLightVideoController.value!.controller.value.size.width,
-                                    height: controller.highLightVideoController.value!.controller.value.size.height,
+                                    width: controller.highLightVideoController.value!.value.size.width,
+                                    height: controller.highLightVideoController.value!.value.size.height,
                                     child: AspectRatio(
-                                      aspectRatio: controller.highLightVideoController.value!.controller.value.aspectRatio,
-                                      child: VideoPlayer(controller.highLightVideoController.value!.controller),
+                                      aspectRatio: controller.highLightVideoController.value!.value.aspectRatio,
+                                      child: CachedVideoPlayerPlus(controller.highLightVideoController.value!),
                                     ),
                                   ),
                                 ),
